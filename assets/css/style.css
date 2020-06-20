@@ -14,6 +14,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--primary);
   font-weight: 700;
 }
+h6{
+  color: white !important;
+}
 
 .text-muted {
   color: var(--primary) !important;
@@ -55,13 +58,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #sidebar-container .logo {
-  padding: 0.875rem 1.25rem;
+  width: 98%;
 }
 
 #sidebar-container .menu {
   width: 18rem;
 }
 
+#sidebar-container .menu a{
+  color: #fff !important;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+}
+#sidebar-container .menu a:hover{
+background: rgba(105, 105, 105, 0.5);
+}
 #content-wrapper.toggled #sidebar-container {
   margin-left: 0;
 }
@@ -81,7 +93,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   #content-wrapper.toggled #sidebar-container {
-    margin-left: -18rem;
+    margin-left: -20.2rem;
   }
 }
 
@@ -108,9 +120,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 220px;
   width: 100%;
 }*/
+#page-content-wrapper{
+  width: 100%;
+  background: url(assets/img/ji.jpg) !important;
+   background-size: 100% !important; 
+}
+
 #page-content-wrapper>.content {
   padding: 80px 30px 30px 280px;
   min-height: calc(100vh - 70px);
+
 }
 
 @media (min-width: 992px) {
@@ -171,12 +190,12 @@ h1, h2, h3, h4, h5, h6 {
 .btns-custom:not(:disabled):not(.disabled).active,
 .btns-custom:not(:disabled):not(.disabled):active, .show>.btns-custom.dropdown-toggle {
   color: #fff;
-  background-color: rgb(251, 48, 48);
-  border-color: #ff0000;
+  background-color:rgb(47, 174, 190);
+  border-color: rgb(47, 174, 190);
 }
 
 .btns-custom:hover {
-  background: firebrick !important;
+  background: rgb(47, 174, 190) !important;
 }
 
 @media (min-width: 576px) {

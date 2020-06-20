@@ -30,7 +30,33 @@
         <a href="Index.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
         <a href="finances.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
         <a href="events.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
-        <a href="E-mail.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+
+        <!--Intento numero 3-->
+        <div class="accordion border-0 " id="accordionExample">
+          <div class="card border-0">
+            <div class="card-header border-0 padding-0" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left border-0 padding-0" id="boton-bandeja" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <a href="E-mail.html" class="dropdown-item dropdown-item-action text-danger alert alert-danger border-0"><i class="fas fa-tablet-alt"></i> Recibidos <small><span class="badge badge-pill badge-muted text-danger">25</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-star"></i> Destacados</a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="far fa-clock"></i> Pospuestos <span class="badge badge-pill badge-muted text-muted">3</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-share-square"></i> Enviados</a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="far fa-bell"></i> Importantes <small><span class="badge badge-pill badge-muted text-muted">1</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-trash-alt"></i> Papelera <small><span class="badge badge-pill badge-muted text-muted">8</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-clone"></i> Borradores </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a href="requesment.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Requerimientos</a>
         <a href="settings.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
       </div>
@@ -72,7 +98,135 @@
       <!-- Nav bar end -->
       <div id="content" class="container-fluid">
         <section class="py-3 ">
+          <div class="row">
+            <div class="container col-sm-10">
+              <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm">
+                <img class="mr-3" src="assets\img\Logotipo.png" alt="" width="70" height="70">
+                <div class="lh-100">
+                  <h2 class=" mb-0 text-white lh-100 h1 ">Tu Bandeja de Entrada</h2>
+                  <small class="small-color">Area de logística y almacén 2020</small>
+                </div>
+              </div>
 
+
+              <table class="table table-hover" id="tabla-Correos">
+                <thead id="tabla-Correos-head">
+                  <tr>
+                    <th scope="col">
+                      <a href="E-mail.html" class="text-warning border-0"><i class="fas fa-tablet-alt"></i> PRINCIPAL.</a>
+
+                    </th>
+                    <th scope="col">REMITENTES</th>
+                    <th scope="col">MENSAJES</th>
+                    <th scope="col">FECHAS</th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-Correos-body">
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Cristian Palacios</td>
+                    <td class="text font-weight-bold">Deven actualizar el stock de los materiales en el los almacenes y en el sistema </td>
+                    <td class="text font-weight-bold">18 jun.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Saida Carranza superv. Log</td>
+                    <td class="text font-weight-bold">Se solicita un reinventario de todos las materias primas del almacen N°3.</td>
+                    <td class="text font-weight-bold">27 may.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Diego Ramirez</td>
+                    <td class="text font-weight-bold">Se requiere presupuesto para una actividad en la localidad vecina por su aniversario.</td>
+                    <td class="text font-weight-bold">8 jun.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-wa bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Irina Sanchez</td>
+                    <td class="text font-weight-bold">Se solicita un cargarmento de materia prima para ser procesado y refinado. </td>
+                    <td class="text font-weight-bold">5 jun.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Jacob Torres Personal del Area TI</td>
+                    <td class="text font-weight-bold">Reunion de todo el personal del Area logistica para discución de implementación de nuevo sistema.</td>
+                    <td class="text font-weight-bold">15 abr.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Eduardo Montez</td>
+                    <td class="text font-weight-bold">Thornton</td>
+                    <td class="text font-weight-bold">30 may.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1" aria-label="...">
+                        <a href="#" class="text-primary bg-muted border-0  "><i class="far fa-bell"></i></a>
+                        <a href="#" class="text-primary bg-muted border-0"><i class="fas fa-trash-alt"></i></a>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-warning"><i class="far fa-star"></i></a></span>
+                        <span class="badge badge-pill badge-dark text-primary"><a href="#" class="text-info"><i class="fas fa-trash-alt"></i></a></span>
+                        <!--<a href="" class="#">&nbsp;&nbsp; Luisa Perales</a>-->
+                      </div>
+                    </th>
+                    <td class="text font-weight-bold">Luisa Perales</td>
+                    <td class="text font-weight-bold">Thornton</td>
+                    <td class="text font-weight-bold">15 may.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+
+            </div>
+          </div>
         </section>
       </div>
     </div>

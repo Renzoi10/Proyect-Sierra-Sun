@@ -93,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Sidebar styles end*/
-
 /*Styles container*/
 .container-fluid {
   padding-right: 0px !important;
@@ -115,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 992px) {
   .toggled #page-content-wrapper>#content, .toggled footer {
-        width: 99%;
+    width: 99%;
     ;
   }
 }
@@ -126,9 +125,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 98.8%;
 }
 
-@media (min-width: 1200px){
-.container {
-    max-width: 2560px;}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 2560px;
+  }
 }
 
 #Graphic-card {
@@ -216,3 +216,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*Butons styles*/
+/*STYLES VANDEJA DE ENTRAD-BOTONES DESPLEGABLES*/
+#headingOne {
+  padding: 0 !important;
+}
+
+#boton-bandeja {
+  padding: 0 !important;
+}

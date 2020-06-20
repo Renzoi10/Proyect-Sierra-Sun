@@ -30,7 +30,33 @@
         <a href="Index.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-home lead mr-2"></i> Inicio</a>
         <a href="finances.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-poll lead mr-2"></i> Estadísticas</a>
         <a href="events.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i> Eventos</a>
-        <a href="E-mail.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+
+        <!--Intento numero 3-->
+        <div class="accordion border-0 " id="accordionExample">
+          <div class="card border-0">
+            <div class="card-header border-0 padding-0" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-block text-left border-0 padding-0" id="boton-bandeja" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <a href="#" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-envelope-open lead mr-2"></i> Bandeja de entrada</a>
+                </button>
+              </h2>
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+              <div class="card-body">
+                <a href="E-mail.html" class="dropdown-item dropdown-item-action text-danger alert alert-danger border-0"><i class="fas fa-tablet-alt"></i> Recibidos <small><span class="badge badge-pill badge-muted text-danger">25</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-star"></i> Destacados</a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="far fa-clock"></i> Pospuestos <span class="badge badge-pill badge-muted text-muted">3</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-share-square"></i> Enviados</a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="far fa-bell"></i> Importantes <small><span class="badge badge-pill badge-muted text-muted">1</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-trash-alt"></i> Papelera <small><span class="badge badge-pill badge-muted text-muted">8</span></small></a>
+                <a href="#" class="dropdown-item dropdown-item-action text-muted bg-light border-0"><i class="fas fa-clone"></i> Borradores </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
         <a href="requesment.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"><i class="fas fa-database lead mr-2"></i>Requerimientos</a>
         <a href="settings.html" class="list-group-item list-group-item-action text-muted bg-light p-3 border-0"> <i class="	fas fa-cogs lead mr-2"></i> Configuración</a>
       </div>
@@ -138,7 +164,7 @@
                       </td>
                       <td class="align-middle"><span class="badge badge-primary text-white">Activo</span></td>
                       <td class="align-middle"><span class="badge badge-secondary">
-                        <i class="fas fa-circle ml-1" style='font-size: 10px;'></i> Ahora</span>
+                          <i class="fas fa-circle ml-1" style='font-size: 10px;'></i> Ahora</span>
                       </td>
                     </tr>
                     <tr class="shadow-sm  bg-dark">
@@ -146,7 +172,7 @@
                       <td><span class="d-block">Diego</span><small>diego@templune.com</small></td>
                       <td class="align-middle"><span class="badge badge-primary text-white">Inactivo</span></td>
                       <td class="align-middle"><span class="badge badge-secondary">
-                        <i class="far fa-circle ml-1" style='font-size: 10px;'></i> 1d</span>
+                          <i class="far fa-circle ml-1" style='font-size: 10px;'></i> 1d</span>
                       </td>
                     </tr>
                     <tr class="shadow-sm  bg-dark">
@@ -154,7 +180,7 @@
                       <td><span class="d-block">Irina</span><small>irina@templune.com</small></td>
                       <td class="align-middle"><span class="badge badge-primary text-white">Activo</span></td>
                       <td class="align-middle"><span class="badge badge-secondary">
-                        <i class="	fas fa-circle ml-1" style='font-size: 10px;'></i> Ahora</span>
+                          <i class="	fas fa-circle ml-1" style='font-size: 10px;'></i> Ahora</span>
                       </td>
                     </tr>
                   </tbody>
@@ -221,7 +247,7 @@
                       <th>Sueldo</th>
                     </tr>
                   </thead>
-                  <tbody class="bg-dark">
+                  <tbody class="bg-light">
                     <tr>
                       <td>Tiger Nixon</td>
                       <td>Arquitecto de Sistemas</td>
@@ -387,4 +413,5 @@
   <!--icons-->
   <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </body>
+
 </html>

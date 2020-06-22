@@ -105,7 +105,6 @@ background: rgba(105, 105, 105, 0.5);
 }
 
 /*Sidebar styles end*/
-
 /*Styles container*/
 .container-fluid {
   padding-right: 0px !important;
@@ -134,7 +133,7 @@ background: rgba(105, 105, 105, 0.5);
 
 @media (min-width: 992px) {
   .toggled #page-content-wrapper>#content, .toggled footer {
-        width: 99%;
+    width: 99%;
     ;
   }
 }
@@ -145,9 +144,10 @@ background: rgba(105, 105, 105, 0.5);
   width: 98.8%;
 }
 
-@media (min-width: 1200px){
-.container {
-    max-width: 2560px;}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 2560px;
+  }
 }
 
 #Graphic-card {
@@ -235,3 +235,11 @@ background: rgba(105, 105, 105, 0.5);
 }
 
 /*Butons styles*/
+/*STYLES VANDEJA DE ENTRAD-BOTONES DESPLEGABLES*/
+#headingOne {
+  padding: 0 !important;
+}
+
+#boton-bandeja {
+  padding: 0 !important;
+}

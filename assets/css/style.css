@@ -47,7 +47,7 @@ h6{
 
 #sidebar-container {
   min-height: 100vh;
-  margin-left: -18rem;
+  margin-left: -20rem;
   -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -62,11 +62,12 @@ h6{
 }
 
 #sidebar-container .menu {
-  width: 18rem;
+  width: 15rem;
 }
 
 #sidebar-container .menu a{
-  color: #fff !important;
+  /*color: #fff  !important;*/
+  color: #fff;
   text-decoration: none;
   display: block;
   padding: 20px;
@@ -122,7 +123,7 @@ background: rgba(105, 105, 105, 0.5);
 #page-content-wrapper{
   width: 100%;
   background: url(assets/img/ji.jpg) !important;
-   background-size: 100% !important; 
+   background-size: 100% !important;
 }
 
 #page-content-wrapper>.content {
@@ -242,4 +243,27 @@ background: rgba(105, 105, 105, 0.5);
 
 #boton-bandeja {
   padding: 0 !important;
+}
+
+.accordion{
+  background-color: rgba(44, 62, 80, 0.1) !important;
+}
+
+/*STYLES DEL DESPLEGABLE (BANDEJA DE ENTRADA) APARTADO SUB-MENU   */
+.card-body{
+  background-color: rgba(44, 62, 80, 0.1) !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+.mtextA{
+  padding-top: 4px !important;
+  padding-bottom: 4px !important;
+}
+.mtextB{
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+.mtext{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
 }

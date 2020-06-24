@@ -18,7 +18,12 @@ $(document).ready(function() {
       }
   } );
 } );
+
+
+
+
 /*Tables scripts end*/
+
 
 /*Scripsts boutons tables validations*/
 (function() {

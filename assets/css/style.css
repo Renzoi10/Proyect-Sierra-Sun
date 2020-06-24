@@ -122,7 +122,7 @@ background: rgba(105, 105, 105, 0.5);
 #page-content-wrapper{
   width: 100%;
   background: url(assets/img/ji.jpg) !important;
-   background-size: 100% !important; 
+   background-size: 100% !important;
 }
 
 #page-content-wrapper>.content {
@@ -159,6 +159,7 @@ background: rgba(105, 105, 105, 0.5);
 }
 
 /*Styles container end*/
+
 /*Butons styles*/
 .bg-primary, .badge-primary {
   background-color: rgba(0, 123, 255, .1) !important;
@@ -235,6 +236,7 @@ background: rgba(105, 105, 105, 0.5);
 }
 
 /*Butons styles*/
+
 /*STYLES VANDEJA DE ENTRAD-BOTONES DESPLEGABLES*/
 #headingOne {
   padding: 0 !important;

@@ -59,3 +59,4 @@ $(document).ready(function() {
   }, false);
 })();
 /*Scripsts boutons tables validations end*/
+

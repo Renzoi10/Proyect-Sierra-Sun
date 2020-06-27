@@ -1,5 +1,28 @@
 /*Tables scripts*/
 $(document).ready(function() {
+<<<<<<< HEAD
+  $('#table1').DataTable( {
+      "language": {
+          "lengthMenu": "Numero de datos para visualizar _MENU_ ",
+          "zeroRecords": "No se encontro elemento",
+          "info": "Pagina _PAGE_ de _PAGES_",
+          "infoEmpty": "No hay datos disponibles",
+          "infoFiltered": "(Se econtraron _TOTAL_ elementos de _MAX_ )",
+          "sSearch": "Buscar",
+          "oPaginate": {
+            "sFirst": "Primero",
+            "sLast": "Ultimo",
+            "sNext": "Siguiente",
+            "sPrevious": "Anterior"
+          },
+          "sProcessing": "Procesando....",
+      }
+  } );
+} );
+
+
+
+=======
   $('#table1').DataTable({
     "language": {
       "lengthMenu": "Numero de datos para visualizar _MENU_ ",
@@ -39,8 +62,10 @@ $(document).ready(function() {
     }
   });
 });
+>>>>>>> 050ab2821f9b6985c96afd82b3c15f1a8b738f4d
 
 /*Tables scripts end*/
+
 
 /*Scripsts boutons tables validations*/
 (function() {
@@ -59,3 +84,4 @@ $(document).ready(function() {
   }, false);
 })();
 /*Scripsts boutons tables validations end*/
+

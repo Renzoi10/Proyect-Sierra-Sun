@@ -45,7 +45,11 @@ h6{
   box-shadow: 0 .5rem 1rem rgba(11, 37, 75, .10) !important;
 }
 
+
 #sidebar-container {
+  background-image: url(../img/sidebarContainer.jpg) !important;
+  background-size:130% ;
+  background-position: bottom !important;
   min-height: 100vh;
   margin-left: -20rem;
   -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -66,7 +70,6 @@ h6{
 }
 
 #sidebar-container .menu a{
-  /*color: #fff  !important;*/
   color: #fff;
   text-decoration: none;
   display: block;
@@ -121,9 +124,12 @@ background: rgba(105, 105, 105, 0.5);
   width: 100%;
 }*/
 #page-content-wrapper{
-  width: 100%;
-  background: url(assets/img/ji.jpg) !important;
-   background-size: 100% !important;
+  background: url(../img/pageContent.jpg)!important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  width:100% !important;
+  margin: 0 auto !important;
+  background-size: 100% !important;
 }
 
 #page-content-wrapper>.content {

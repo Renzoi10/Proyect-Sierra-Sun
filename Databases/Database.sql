@@ -1,7 +1,7 @@
 create database Proyect_sierra_sun;
 use Proyect_sierra_sun;
 
-DROP TABLES if exists Articulos;
+/*DROP TABLES if exists Articulos;
 create table Articulos(
 Codigo_A int(6) auto_increment,
 Nombre varchar(20) not null,
@@ -11,9 +11,20 @@ Costo_Unidad int(5) not null,
 Permisos int (10) default null,
 primary key (Codigo_A),
 unique key Codigo_A (Codigo_A)
-);
+);*/
 
-drop table if exists Users;
+/*create procedure insertArticol( 
+in	_Nombre varchar(20),
+	_Stock int(10),
+	_Estado varchar(30) ,
+	_Costo_Unidad int(5),
+	_Permisos int (10)
+)begin
+    insert into Articulos(Nombre,Stock,Estado,Costo_Unidad,Permisos) values (_Nombre,_Stock,_Estado,_Costo_Unidad,_Permisos); 
+ end*/   
+
+
+/*drop table if exists Users;
 create table Users(
 id_Users int(6) not null auto_increment,
 Usuario varchar(30) not null,
@@ -70,7 +81,41 @@ unique key id_Presu (id_Presu));
 
 alter table Comunidades add constraint fk_ComuPresu foreign key (id_Presupuesto) references Presupuesto (id_Presu) on delete restrict on update cascade;
 
+*/
+
+/*DELIMITER //
+create PROCEDURE insArtic(
+IN 	_Nombre varchar(20),
+	_Stock int(10),
+	_Estado varchar(30) ,
+	_Costo_Unidad int(5),
+	_Permisos int (10)
+)begin
+insert into Articulos(Nombre,Stock,Estado,Costo_Unidad,Permisos) values (_Nombre,_Stock,_Estado,_Costo_Unidad,_Permisos); 
+end
+//DELIMITER ;*/
 
 
+DELIMITER //
+create PROCEDURE selectArtic(
+)begin
+SELECT * FROM proyect_sierra_sun.articulos;
+end
+//DELIMITER ;
+
+
+
+call selectArtic();
+
+
+
+call insArtic("Pala",10,"disponible",20,200);
+
+SELECT * FROM proyect_sierra_sun.articulos;
+
+
+delete from articulos where Codigo_A=10;
+
+delete from articulos where Codigo_A=8
 
 

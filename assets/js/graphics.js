@@ -82,3 +82,7 @@ var myChart = new Chart(ctx, {
   options: gradientChartOptionsConfiguration
 });
 /*Graphic Chartjs end*/
+
+
+
+

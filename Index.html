@@ -22,8 +22,12 @@
   <div class="d-flex" id="content-wrapper">
 
     <!-- Sidebar -->
+<<<<<<< HEAD
     <div id="sidebar-container" class="border-right"
       style="background-image: url(assets/img/sidebarContainer.jpg) !important; background-size:130% ;">
+=======
+    <div id="sidebar-container" class="border-right bkg-container" >
+>>>>>>> 5f37d9eaf8e456c9d606db6a5a4e17062c672aed
       <div class="logo">
         <img id="icon-sidebar" src="assets\img\Icon.png">
       </div>
@@ -35,9 +39,14 @@
         <a href="events.html" class="mtextB text-light p-3 border-0"><i class="far fa-calendar-alt lead mr-2"></i>
           Eventos</a>
 
+<<<<<<< HEAD
         <!--APARTADO DEL BOTON DESPLEGABLE DONDE SE PUEDE INGRESAR Y VISUALIZAR LA BANDEJA DE ENTRADA-->
         <div class="accordion border-0 " id="accordionExample"
           style="background-color:rgba(255, 255, 255, 0) !important; ">
+=======
+        <!--Collapse Imbox-->
+        <div class="accordion border-0 " id="accordionExample" style="background-color:rgba(255, 255, 255, 0) !important; ">
+>>>>>>> 5f37d9eaf8e456c9d606db6a5a4e17062c672aed
           <div class="card border-0" style="background-color:rgba(255, 255, 255, 0) !important; ">
             <div class="card-header border-0 padding-0" id="headingOne">
               <h2 class="mb-0">
@@ -48,7 +57,7 @@
                 </button>
               </h2>
             </div>
-            <!-- APARTADO DE FUNCIONALIDADES Y BOTONES DE LA BANDEJA DE ENTRADA-->
+            <!--Collapse Imbox end-->
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 <a href="E-mail.html" class="mtextA text-danger alert alert-danger border-0"><i
@@ -79,9 +88,7 @@
     <!-- Sidebar end-->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper" class="table-responsive" style="background: url(assets/img/pageContent.jpg)
-    !important; background-size: cover !important; background-repeat: no-repeat !important; width:
-    100% !important; margin: 0 auto !important;" class="w-100 bg-light-blue">
+    <div id="page-content-wrapper" style="" class="w-100 bg-light-blue">
       <!-- Nav bar -->
       <nav class="navbar navbar-expand-lg navbar-light bg-dark border-bottom">
         <div class="container">
@@ -249,6 +256,82 @@
           <!-- Table2 -->
           <div class="row mb-5">
             <div class="col-lg-12">
+              <!--Form modal-->
+              <button type="button" class="btn btn-outline-info text-white" data-toggle="modal" data-target="#EditModal">Nuevo</button>
+              <div class="modal fade text-white" id="EditModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog ">
+                  <div class="modal-content  bg-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title text-white" id="exampleModalLabel">Nuevo Articulo</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form class="needs-validation" novalidate>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">Nombre del Articulo</label>
+                            <input type="text" class="form-control" id="validationCustom01" required>
+                            <div class="valid-feedback">
+                              Correcto
+                            </div>
+                            <div class="invalid-feedback">
+                              Indique el nombre
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">Estado</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                              Describa el estado del producto.
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">Costo unitario</label>
+                            <input type="text" class="form-control" id="validationCustom03" required>
+                            <div class="invalid-feedback">
+                              Indicque el costo.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">Stock</label>
+                            <select class="custom-select" id="validationCustom04" required>
+                              <option selected disabled value="">Elegir</option>
+                              <option>10</option>
+                              <option>20</option>
+                              <option>30</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Indique el stock.
+                            </div>
+                          </div>
+                          <div class="col-md-3 mb-3">
+                            <label for="validationCustom04">Stock Maximo</label>
+                            <select class="custom-select" id="validationCustom04" required>
+                              <option selected disabled value="">Elegir</option>
+                              <option>10</option>
+                              <option>20</option>
+                              <option>30</option>
+                            </select>
+                            <div class="invalid-feedback">
+                              Indique el stock maximo.
+                            </div>
+                          </div>
+                        </div>
+                        <button class="btn btn-outline-info " type="submit">Actualizar</button>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-outline-info " data-dismiss="modal">Cerrar</button>
+                      <button type="button" class="btn btn-outline-info ">Enviar mensaje</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--Form modal-->
               <div class="table-responsive">
                 <table id="table1" class="table table-striped text-white table-bordered ">
                   <thead class="shorting-1">
@@ -271,8 +354,13 @@
                       <td>S/.20</td>
                       <td>200</td>
                       <td>
+<<<<<<< HEAD
                         <button type="button" class="btn btn-outline-info text-white" data-toggle="modal"
                           data-target="#EditModal">Editar</button>
+=======
+                        <!--Buton colspan form-->
+                        <button type="button" class="btn btn-outline-info text-white" data-toggle="modal" data-target="#EditModal">Editar</button>
+>>>>>>> 5f37d9eaf8e456c9d606db6a5a4e17062c672aed
                         <div class="modal fade" id="EditModal" tabindex="-1" role="dialog">
                           <div class="modal-dialog ">
                             <div class="modal-content  bg-dark">
@@ -346,6 +434,7 @@
                             </div>
                           </div>
                         </div>
+                        <!--Buton colspan form end-->
                       </td>
                     </tr>
                   </tbody>

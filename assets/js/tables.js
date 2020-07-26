@@ -39,8 +39,8 @@ $(document).ready(function() {
     }
   });
 });
-
 /*Tables scripts end*/
+
 
 /*Scripsts boutons tables validations*/
 (function() {
@@ -59,4 +59,3 @@ $(document).ready(function() {
   }, false);
 })();
 /*Scripsts boutons tables validations end*/
-

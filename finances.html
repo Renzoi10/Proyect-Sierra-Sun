@@ -11,7 +11,8 @@
   <link rel="stylesheet" href="Boostrap\css\bootstrap.min.css">
   <!--Custom styles-->
   <link href="assets/css/style.css" rel="stylesheet">
-  <link href="assets/css/table-styles.css" rel="stylesheet">
+  <link href="assets\css\table-BandejaEntrada.css" rel="stylesheet">
+  <link href="Z_Pruevas_CSS.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="Tables\datatables.min.css">
   <link rel="stylesheet" type="text/css" href="Tables\dataTables.bootstrap4.css">
   <!-- Google fonts -->
@@ -22,7 +23,7 @@
   <div class="d-flex" id="content-wrapper">
 
     <!-- Sidebar -->
-    <div id="sidebar-container" class="border-right" >
+    <div id="sidebar-container" class="border-right">
       <div class="logo">
         <img id="icon-sidebar" src="assets\img\Icon.png">
       </div>
@@ -100,17 +101,402 @@
       <!-- Nav bar end -->
       <div id="content" class="container-fluid">
         <section class="py-3 ">
-          <div class="caja1"></div>
-          <div class="caja2"></div>
-          <div class="caja3"></div>
-          <div class="caja4"></div>
+          <div class="row">
+            <div class="container col-sm-11">
+              <!--  NOTE: GRAFICA DE CRECIMIENTO TRIMESTRAL-->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="card bg-dark">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Grafica de Crecimiento Anual</h5>
+                      <!-- AQUI VA LA GRAFICA PRINCIPAL -->
+                      <div class="chart-area">
+                        <canvas id="graficaLineCurva" class="" width="1000" height="440" class="chartjs-render-monitor" style="display: block; height: 220px; width: 300px;">
+                        </canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--  NOTE: GRAFICA DE TRABAJADORES -->
+                <div class="col-md-6">
+                  <div class="card bg-dark">
+                    <div class="card-body">
+                      <h5 class="card-title text-light">Grafica de Trabajadores</h5>
+                      <!--  NOTE: AQUI VA LA GRAFICA PRINCIPAL -->
+                      <div class="chart-area">
+                        <canvas id="graficaDonaTrabajadores" class="" width="1000" height="440" class="chartjs-render-monitor" style="display: block; height: 220px; width: 300px;">
+                        </canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <br><br>
+          <!------------------------------------------------------------------------->
+          <!-- APARTADO DE LAS GRAFICAS POR AREAS -->
+
+
+          <div class="row">
+            <div class="container col-sm-11">
+              <div class="card-deck">
+
+                <!-- NOTE: GRAFICA DE PRODUCTIVIDAD -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-light">Productividad</h6>
+                    <!-- AQUI VA LA GRAFICA -->
+                    <div class="chart-area">
+                      <canvas id="graficaBarraProductividad" class="" width="500" height="500" class="chartjs-render-monitor" style="display: block; height: 100px; width: 70px;">
+                      </canvas>
+                    </div>
+
+                  </div>
+                  <center>
+                    <div class="card-footer" style="padding: 6px">
+                      <small class="text-light">1° TRIMESTRE <button type="button" class="btn btn-outline-light btn-sm">Ver <i class='fas fa-clipboard-list' style='font-size:24px'></i></button></small>
+                    </div>
+                  </center>
+                </div>
+
+                <!-- NOTE: GRAFICA DE EFICIENCIA -->
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-light">Eficiencia</h6>
+                    <!-- AQUI VA LA GRAFICA -->
+                    <div class="chart-area">
+                      <canvas id="graficaMixtaEficiencia" class="" width="500" height="500" class="chartjs-render-monitor" style="display: block; height: 100px; width: 70px;">
+                      </canvas>
+                    </div>
+
+                  </div>
+                  <center>
+                    <div class="card-footer" style="padding: 6px">
+                      <small class="text-light">1° TRIMESTRE <button type="button" class="btn btn-outline-light btn-sm">Ver <i class='fas fa-clipboard-list' style='font-size:24px'></i></button></small>
+                    </div>
+                  </center>
+                </div>
+
+                <!-- NOTE: GRAFICA DE PRESUPUESTOS -->
+                <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-light">Presupuestos</h6>
+                    <!-- AQUI VA LA GRAFICA -->
+                    <div class="chart-area">
+                      <canvas id="graficaBarraPresupuesto" class="" width="500" height="500" class="chartjs-render-monitor" style="display: block; height: 100px; width: 70px;">
+                      </canvas>
+                    </div>
+
+                  </div>
+                  <center>
+                    <div class="card-footer" style="padding: 6px">
+                      <small class="text-light">1° TRIMESTRE <button type="button" class="btn btn-outline-light btn-sm">Ver <i class='fas fa-clipboard-list' style='font-size:24px'></i></button></small>
+                    </div>
+                  </center>
+                </div>
+
+                <!-- NOTE: GRAFICA DE COSTOS -->
+                <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                  <div class="card-body" style="padding-left: 15px; padding-right: 15px;">
+                    <h6 class="card-title text-light">Actividades - Costos por Comunidad</h6>
+                    <!-- AQUI VA LA GRAFICA PRINCIPAL -->
+                    <div class="chart-area">
+                      <canvas id="graficaDonaCostos" class="" width="500" height="500" class="chartjs-render-monitor" style="display: block; height: 100px; width: 70px;">
+                      </canvas>
+                    </div>
+                  </div>
+                  <center>
+                    <div class="card-footer" style="padding: 6px">
+                      <small class="text-light">1° TRIMESTRE <button type="button" class="btn btn-outline-light btn-sm">Ver <i class='fas fa-clipboard-list' style='font-size:24px'></i></button></small>
+                    </div>
+                  </center>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- FIN APARTADO D5 LAS GRAFICAS  -->
+          <!--<br><br><br-->
+          <div class="row">
+            <div class="container col-sm-11">
+              <div class="row row-cols-1 row-cols-md-2">
+
+                <!-- NOTE: APARTADO ACTIVIDADES RECIENTES -->
+                <div class="col-sm-4">
+                  <div class="card" style="border: 0px;">
+                    <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-info rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 0px !important;">
+                      <img class="mr-3" src="assets\img\Logotipo.png" alt="" width="70" height="70">
+                      <div class="lh-100">
+                        <h5 class=" mb-0 text-white lh-100 h5 ">Actividades Mas Recientes</h5>
+                        <small class="small-color">Area de logística y almacén 2020</small>
+                      </div>
+                    </div>
+
+                    <div class="card-body" style="padding-left: 8px ; padding-right: 8px;">
+
+                      <!-- NOTE: FICHERO DE ACTIVIDADES RAPIDA - I-->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 10px !important; padding-left: 15px!important; padding-right: 10px!important; ">
+                        <!-- QUESTION: APARTADO notificaciones Fecha -->
+                        <div class="col-sm-2" style="padding-left: 2px ; padding-right:2px;">
+                          <p class="text-muted text-center" style="font-size: 12px; margin-top: 2px; margin-bottom: 2px ;">42 mins Ago</p>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Botones -->
+                        <div class="col-sm-2" style="padding-left: 6px ; padding-right:4px;">
+                          <button type="button" class="btn btn-pink text-light btn-circle btn-lg"><i class="fas fa-list"></i>
+                          </button>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Mensajes -->
+                        <div class="lh-100 col-sm-8" style="padding-left: 20px ; padding-right: 0px;">
+                          <h5 class=" mb-0 text-dark lh-100 h6 ">Actividades Recientes</h5>
+                          <small class="text-muted" style="font-size: 12px;"> Area de logística y almacén 2020</small>
+                        </div>
+                      </div>
+
+                      <!-- NOTE: FICHERO DE ACTIVIDADES RAPIDAS - II-->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 10px !important; padding-left: 15px!important; padding-right: 10px!important; ">
+                        <!-- QUESTION: APARTADO notificaciones Fecha -->
+                        <div class="col-sm-2" style="padding-left: 2px ; padding-right:2px;">
+                          <p class="text-muted text-center" style="font-size: 12px; margin-top: 2px; margin-bottom: 2px ;">1 day Ago</p>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Botones -->
+                        <div class="col-sm-2" style="padding-left: 6px ; padding-right:4px;">
+                          <button type="button" class="btn btn-purple text-light btn-circle btn-lg"><i class="fas fa-folder-open"></i>
+                          </button>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Mensajes -->
+                        <div class="lh-100 col-sm-8" style="padding-left: 20px ; padding-right:0px;">
+                          <h5 class=" mb-0 text-dark lh-100 h6 ">Actividades Recientes</h5>
+                          <small class="text-muted" style="font-size: 12px;"> Area de logística y almacén 2020</small>
+                        </div>
+                      </div>
+
+                      <!-- NOTE: FICHERO DE ACTIVIDADES RAPIDAS - III-->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 10px !important; padding-left: 15px!important; padding-right: 10px!important; ">
+                        <!-- QUESTION: APARTADO notificaciones Fecha -->
+                        <div class="col-sm-2" style="padding-left: 2px ; padding-right:2px;">
+                          <p class="text-muted text-center" style="font-size: 12px; margin-top: 2px; margin-bottom: 2px ;">6 hours Ago</p>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Botones -->
+                        <div class="col-sm-2" style="padding-left: 6px ; padding-right:4px;">
+                          <button type="button" class="btn btn-info text-light btn-circle btn-lg"><i class="fas fa-clipboard-list"></i>
+                          </button>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Mensajes -->
+                        <div class="lh-100 col-sm-8" style="padding-left: 20px ; padding-right:0px;">
+                          <h5 class=" mb-0 text-dark lh-100 h6 ">Actividades Recientes</h5>
+                          <small class="text-muted" style="font-size: 12px;"> Area de logística y almacén 2020</small>
+                        </div>
+                      </div>
+
+                      <!-- NOTE: FICHERO DE ACTIVIDADES RAPIDAS - IV-->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 10px !important; padding-left: 15px!important; padding-right: 10px!important; ">
+                        <!-- QUESTION: APARTADO notificaciones Fecha -->
+                        <div class="col-sm-2" style="padding-left: 2px ; padding-right:2px;">
+                          <p class="text-muted text-center" style="font-size: 12px; margin-top: 2px; margin-bottom: 2px ;">2 days Ago</p>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Botones -->
+                        <div class="col-sm-2" style="padding-left: 6px ; padding-right:4px;">
+                          <button type="button" class="btn btn-lemon text-light btn-circle btn-lg"><i class="fas fa-bolt"></i>
+                          </button>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Mensajes -->
+                        <div class="lh-100 col-sm-8" style="padding-left: 20px ; padding-right:0px;">
+                          <h5 class=" mb-0 text-dark lh-100 h6 ">Actividades Recientes</h5>
+                          <small class="text-muted" style="font-size: 12px;"> Area de logística y almacén 2020</small>
+                        </div>
+                      </div>
+
+                      <!-- NOTE: FICHERO DE ACTIVIDADES RAPIDAS - V-->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 10px !important; padding-left: 15px!important; padding-right: 10px!important; ">
+                        <!-- QUESTION: APARTADO notificaciones Fecha -->
+                        <div class="col-sm-2" style="padding-left: 2px ; padding-right:2px;">
+                          <p class="text-muted text-center" style="font-size: 12px; margin-top: 2px; margin-bottom: 2px ;">15 mins Ago</p>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Botones -->
+                        <div class="col-sm-2" style="padding-left: 6px ; padding-right:4px;">
+                          <button type="button" class="btn btn-gold text-light btn-circle btn-lg"><i class="fas fa-history"></i>
+                          </button>
+                        </div>
+                        <!-- QUESTION: APARTADO notificaciones Mensajes -->
+                        <div class="lh-100 col-sm-8" style="padding-left: 20px ; padding-right:0px;">
+                          <h5 class=" mb-0 text-dark lh-100 h6 ">Actividades Recientes</h5>
+                          <small class="text-muted" style="font-size: 12px;"> Area de logística y almacén 2020</small>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+
+                <!-- CHANGED: APARTADO 0 - TABLERO DE INFORMACIÓN -->
+                <div class="col-sm-8 ">
+                  <div class="card ">
+                    <div class="card-body" style="padding-left: 5px ; padding-right:5px;">
+
+                      <!-- CHANGED: APARTADO I - Cabezera Detalles Tabla Información -->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-gold rounded shadow-sm"
+                        style="margin-top: 0px !important;margin-bottom: 0px !important; padding-left: 10px!important; padding-right: 10px!important; padding-bottom: 15px!important; ">
+                        <div class="row">
+                          <div class="container col-sm-1" style="padding-left: 20px ; padding-right:0px; margin-bottom:15px; margin-left:10px; margin-right: 20px">
+                            <img class="mr-3" src="assets\img\Logotipo.png" alt="" width="70" height="70" style="margin-right:0px!important">
+                          </div>
+                          <div class="container col-sm-9" style="padding-left: 0px ; padding-right:0px; margin-bottom:15px; margin-left:10px;">
+                            <h5 class="text-light" style="margin-bottom:0px">Estado del Requerimiento</h5>
+                            <small class="text-light">Resumen del último mes:</small>
+                          </div>
+                          <div class="container col-sm-12" style="padding-left: 0px ; padding-right:0px;">
+                            <div class="col-sm-12 ">
+                              <button type="button" class="btn btn-dark btn-xs"><i class="fas fa-plus-circle" style='font-size:18px'></i> Add</button>
+                              <button type="button" class="btn btn-outline-light btn-xs"><i class="fas fa-exclamation-circle" style="font-size:18px;"></i> Info</button>
+                              <button type="button" class="btn btn-outline-light btn-xs"><i class="far fa-trash-alt" style='font-size:18px'></i> Desechar</button>
+                              <button type="button" class="btn btn-outline-light btn-xs"><i class="fas fa-file-upload" style='font-size:18px'></i> Documentar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- CHANGED: APARTADO II - Cuerpo Detalles Tabla Información -->
+                      <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm" style="margin-top: 0px !important;margin-bottom: 0px !important; padding-left: 10px!important; padding-right: 10px!important; ">
+                        <div class="row" style="width: 105%">
+                          <div class="container col-sm-12" style="margin-bottom: 0px">
+
+                            <div class="table-container">
+                              <table class="table table-hover" id="tabla-Clientes">
+                                <thead id="tabla-Clientes-head">
+                                  <tr>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> CODIGO.</a>
+                                    </th>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> CLIENTE.</a>
+                                    </th>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> AREA.</a>
+                                    </th>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> MATERIA.</a>
+                                    </th>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> COSTOS.</a>
+                                    </th>
+                                    <th scope="col">
+                                      <a href="#" class="text-light border-0"> ESTATUS.</a>
+                                    </th>
+                                  </tr>
+                                </thead>
+
+                                <tbody id="tabla-Clientte-body">
+                                  <tr>
+                                    <th scope="row">C38282145</th>
+                                    <td>COSAR MAQUINARIA SAC</td>
+                                    <td>Administración</td>
+                                    <td>Herramientas</td>
+                                    <td>9700.00</td>
+                                    <td>En proceso</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C82511923</th>
+                                    <td>Oceanica Internacional SRL</td>
+                                    <td>Almancen</td>
+                                    <td>Maquinaria</td>
+                                    <td>12600.00</td>
+                                    <td>Entregado</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C37282193</th>
+                                    <td>Catercu Perú</td>
+                                    <td>Administración</td>
+                                    <td>Materia Prima</td>
+                                    <td>16200.00</td>
+                                    <td>En proceso</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C32151735</th>
+                                    <td>Corporación Ferreyros</td>
+                                    <td>Almancen</td>
+                                    <td>Indumentaria</td>
+                                    <td>4600.00</td>
+                                    <td>Entregado</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C38312835</th>
+                                    <td>CRESKO</td>
+                                    <td>Logistica</td>
+                                    <td>Herramientas</td>
+                                    <td>6300.00</td>
+                                    <td>En Listando</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C50233805</th>
+                                    <td>Grupo Makro</td>
+                                    <td>Logistica</td>
+                                    <td>Materia Prima</td>
+                                    <td>18500.00</td>
+                                    <td>En Listando</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">C38332103</th>
+                                    <td>RENTRAC</td>
+                                    <td>Administración</td>
+                                    <td>Maquinaria</td>
+                                    <td>12500.00</td>
+                                    <td>En proceso</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+
+                            <!-- CHANGED: APARTADO III - Footer Detalles Tabla Información -->
+                            <div class="d-flex align-items-center p-3 my-3 text-white-50 bg-light rounded shadow-sm"
+                              style="margin-top: 0px !important;margin-bottom: 0px !important; padding-left: 0px!important; padding-right: 10px!important; padding:0px!important;">
+
+                              <div class="lh-100 col-sm-5" style="padding-left: 35px ; padding-right:20px;">
+
+                                <small class="text-muted"> Mostrando 1 a 7 de 20 entradas</small>
+                              </div>
+                              <div class="lh-100 col-sm-7" style="padding-left: 20px ; padding-right:0px;">
+
+                                <button type="button" class="btn btn-circle text-light btn-gold"><i class='fas fa-angle-double-left'></i></button>
+                                <button type="button" class="btn btn-circle text-light btn-dark"><i class='fas fa-angle-left'></i></button>
+                                <button type="button" class="btn btn-circle text-light btn-gold">1</button>
+                                <button type="button" class="btn btn-circle text-light btn-dark">2</button>
+                                <button type="button" class="btn btn-circle text-light btn-gold">3</button>
+                                <button type="button" class="btn btn-circle text-light btn-dark">4</button>
+                                <button type="button" class="btn btn-circle text-light btn-gold">5</button>
+                                <button type="button" class="btn btn-circle text-light btn-dark">6</button>
+                                <button type="button" class="btn btn-circle text-light btn-gold">7</button>
+                                <button type="button" class="btn btn-circle text-light btn-gold"><i class='fas fa-angle-right'></i></button>
+                                <button type="button" class="btn btn-circle text-light btn-dark"><i class='fas fa-angle-double-right'></i></button>
+
+                                <!--CIERRE DE BLOCK DE DIV´S (3 DIV)-->
+                              </div>
+
+
+                            </div>
+                            <!--CIERRE DE BLOCK DE DIV´S (3 DIV)-->
+                          </div>
+                        </div>
+                      </div>
+                      <!--CIERRE DE BLOCK DE DIV´S (3 DIV) -->
+                    </div>
+                  </div>
+                </div>
+                <!--CIERRE DE BLOCK DE DIV´S (3 DIV)-->
+              </div>
+            </div>
+          </div>
+          <!--ESPACIO LIBRE ENNTRE COMPONENTES FINALES -->
+          <br><br>
+
+          <!--CIERRE DE BLOCK DE DIV´S (1 SECTION Y 1 DIV)-->
         </section>
       </div>
+      <!--CIERRE DE BLOCK DE DIV´S (1 DIV)-->
     </div>
-
-
-
-    <!-- Fin Page Content -->
+    <!--CIERRE DE BLOCK DE DIV´S FINAL (1 DIV)-->
   </div>
 
 

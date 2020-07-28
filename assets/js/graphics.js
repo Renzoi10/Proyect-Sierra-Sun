@@ -517,3 +517,8 @@ var graficaBarraPresupuesto = new Chart(ctx, {
   responsive: true,
 
 });
+/*Graphic Chartjs end*/
+
+
+
+

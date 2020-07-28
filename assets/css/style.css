@@ -8,6 +8,8 @@
 body {
   overflow: hidden;
   font-family: 'Muli', sans-serif;
+
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -49,8 +51,8 @@ h6{
 #sidebar-container {
   background-image: url(../img/sidebarContainer.jpg) !important;
   background-size:130% ;
-  background-position: bottom !important;
-  min-height: 100vh;
+  /*background-position: bottom !important;
+*/  min-height: 100vh;
   margin-left: -20rem;
   -webkit-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, 0.1);
@@ -129,6 +131,7 @@ background: rgba(105, 105, 105, 0.5);
   background-repeat: no-repeat !important;
   width:100% !important;
   margin: 0 auto !important;
+  margin-right: 0px !important;
   background-size: 100% !important;
 }
 

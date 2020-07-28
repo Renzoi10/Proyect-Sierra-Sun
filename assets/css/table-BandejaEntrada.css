@@ -2,15 +2,7 @@
 table {
   background: ;
 }
-#table-1 {
-  background: rgb(59, 180, 196);
-  position: absolute;
-  top: 400px;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 20px;
-}
+
 
 /*tables styles end*/
 /*STYLOS TABLAS DE BANDEJA DE ENTRADA*/
@@ -24,5 +16,21 @@ table {
 }
 
 #tabla-Correos-body {
+  background-color: rgb(255, 250, 215) ;
+}
+
+
+/*STYLOS TABLAS DE CLIENTES DE ENTRADA*/
+/*-------------------------------------*/
+#tabla-Clientes {
+font-size: 15px;
+}
+
+#tabla-Clientes-head {
+  background-color: rgb(26, 22, 40);
+
+}
+
+#tabla-Clientes-body {
   background-color: rgb(255, 250, 215) ;
 }
